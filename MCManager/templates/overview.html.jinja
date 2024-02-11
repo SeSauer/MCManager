@@ -1,0 +1,18 @@
+{% extends "Base.html.jinja" %}
+
+{% block Page %}
+    <header>
+        Server Overview
+    </header>
+    <body>
+        {% for server in servers %}
+            <a href="{{ url_for('server_page.server_page', server_name=server.name ) }}">
+                <div class="server_overview">
+                    Name: {{ server.name }}
+                    Folder: {{ server.server.folder.__str__() }}
+                    Executable: {{ server.executable.get_path().__str__() }}
+                </div>
+            </a>
+        {% endfor %}
+    </body>
+{% endblock %}

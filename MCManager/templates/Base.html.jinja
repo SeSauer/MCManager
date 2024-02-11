@@ -1,0 +1,14 @@
+<!doctype html>
+<title>{% block title %}Default{% endblock %} - MCManager</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<section>
+  <header>
+    <picture>
+        <img src="{{ url_for('static', filename='Logo.png') }}" alt="MCManager Logo"/>
+    </picture>
+  </header>
+</section>
+<section class="Page">
+    {% block Page %}{% endblock %}
+</section>

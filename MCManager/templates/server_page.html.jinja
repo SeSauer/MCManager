@@ -1,0 +1,12 @@
+{% extends "Base.html.jinja" %}
+
+{% block Page %}
+    <header>
+        {{ server.name }}
+    </header>
+    <body>
+        {{ server.name }}
+        {{ server.server.folder }}
+        {{ server.args }}
+    </body>
+{% endblock %}
